@@ -1,26 +1,45 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #fffff0; /* Ivory */
+  --foreground: #2f353b; /* Deep Charcoal */
+  --rose-gold: #b76e79;
+  --sage-green: #8f9779;
+  --deep-charcoal: #2f353b;
+  --ivory: #fffff0;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+  --color-rose-gold: var(--rose-gold);
+  --color-sage-green: var(--sage-green);
+  --color-deep-charcoal: var(--deep-charcoal);
+  --color-ivory: var(--ivory);
+  --font-sans: var(--font-geist-sans), sans-serif;
+  --font-mono: var(--font-geist-mono), monospace;
+  --font-serif: var(--font-playfair), serif;
+  --font-cursive: var(--font-great-vibes), cursive;
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  /* Luxury shadow */
+  --shadow-luxury: 0 10px 40px -10px rgba(183, 110, 121, 0.15);
+  
+  /* Soft rounded corners */
+  --radius-luxury: 1.5rem;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Glassmorphism utilities */
+.glass {
+  background: rgba(255, 255, 240, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.5);
 }

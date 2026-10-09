@@ -30,7 +30,7 @@ export default function DashboardLayout({
   return (
     <div suppressHydrationWarning className="flex flex-1 h-screen overflow-hidden bg-ivory">
       <Sidebar />
-      <main className="flex-1 overflow-y-auto p-8 relative">
+      <main className="flex-1 overflow-y-auto p-4 md:p-8 relative pt-16 md:pt-8">
         <div className="absolute top-[-10%] right-[-10%] w-96 h-96 bg-sage-green/10 rounded-full blur-3xl pointer-events-none" />
         {children}
       </main>
